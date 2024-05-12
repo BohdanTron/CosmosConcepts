@@ -1,4 +1,6 @@
-﻿using ChangeFeed;
+﻿// Link to the official sample: https://github.com/Azure/azure-cosmos-dotnet-v3/blob/master/Microsoft.Azure.Cosmos.Samples/Usage/ChangeFeed/Program.cs#L552
+
+using ChangeFeed;
 using Microsoft.Azure.Cosmos;
 
 var connectionString = "";
@@ -28,7 +30,7 @@ var changeFeedProcessor = sourceContainer.Container
     })
     .WithInstanceName(Environment.MachineName)
     .WithLeaseContainer(leaseContainer)
-    .WithStartTime(DateTime.UtcNow.AddDays(-7))
+    .WithStartTime(DateTime.UtcNow.AddDays(-70))
     .Build();
 
 var changeFeedEstimator = sourceContainer.Container
